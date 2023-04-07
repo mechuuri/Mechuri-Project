@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h3>camp_item</h3>
+    <hr>
+    <div class=row>
+       <table class="table">
+        <tr>
+          <td>
+          	<table class="table" th:each="vo:${list}">
+          	  <tr>
+          	    <td class="text-center" width="30%" rowspan="4">
+          	      <a th:href="@{/camp/item_detail(ino=${vo.ino})}">
+          	      <img th:src="${vo.image}" style="width: 320px;height: 150px" class="img-rounded">
+          	      </a>
+          	    </td>
+          	    
+          	    <td width="70%"><a th:href="@{/camp/item_detail(ino=${vo.ino})}"></a><span th:text="${vo.name}"></span>&nbsp;</td>
+          	  </tr>
+          	  <tr>
+          	    <td width="70%" th:text="${vo.name}"></td>
+          	  </tr>
+          	  <tr>
+          	    <td width="70%" th:text="${vo.price}"></td>
+          	  </tr>
+          	</table>
+          </td>
+        </tr>
+      </table>
+    </div>
+   
+  </div>
+</body>
+</html>

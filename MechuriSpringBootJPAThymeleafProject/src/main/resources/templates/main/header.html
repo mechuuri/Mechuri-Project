@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<th:block>
+<div class="wrapper row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a th:href="@{/}">Camp!Camp!Camp!</a></h1>
+    </div>
+    <div class="fl_right">
+      <ul class="inline">
+        <!-- <li><i class="fa fa-phone"></i> +00 (123) 456 7890</li>
+        <li><i class="fa fa-envelope-o"></i> info@domain.com</li> -->
+      </ul>
+    </div>
+    
+  </header>
+</div>
+<div class="wrapper row2">
+  <nav id="mainav" class="clear"> 
+    <ul class="clear">
+      <li class="active"><a th:href="@{/}">Home</a></li>
+      <li><a class="drop" href="#">스토어</a>
+        <ul>
+          <li><a th:href="@{/camp/camp_item}">캠핑용품</a></li>
+        </ul>
+      </li>
+      <li><a class="drop" href="#">검색</a>
+        <ul>
+          <li><a th:href="@{/camp/item_find}">캠핑용품검색</a></li>
+        </ul>
+      </li>
+      <li><a th:href="@{/board/board_list}">커뮤니티</a></li>
+    </ul>
+  </nav>
+</div>
+</th:block>
+</body>
+</html>

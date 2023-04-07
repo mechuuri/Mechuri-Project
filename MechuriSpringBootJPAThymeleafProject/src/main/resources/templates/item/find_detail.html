@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- 
+INO int 
+IMAGE text 
+NAME text 
+DESCRIPTION text 
+STATUS text 
+BRAND text 
+PRICE int 
+SALE int 
+STOCK int 
+LIKE_CNT int 
+JJIM_CNT int 
+ICNO int
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="wrapper row3">
+  <main class="container clear"> 
+    <table class="table">
+     <tr>
+       <td>
+        <img th:src="${vo.image}" style="width: 100%;height: 500px">
+       </td>
+     </tr>
+    </table>
+    <div style="height: 10px"></div>
+    <table class="table">
+      <tr>
+       <td width=20% class="text-center" colspan="2"><h3 th:text="${vo.name}"></h3></td>
+      </tr>
+      <tr>
+       <th width=20% class="text-center">브랜드</th>
+       <td width=80% th:text="${vo.brand}"></td>
+      </tr>
+      <tr>
+       <th width=20% class="text-center">상태</th>
+       <td width=80% th:text="${vo.status}"></td>
+      </tr>
+      <tr>
+       <th width=20% class="text-center">재고</th>
+       <td width=80% th:text="${vo.stock}"></td>
+      </tr>
+      <tr>
+       <th width=20% class="text-center">가격</th>
+       <td width=80% th:text="${vo.price}"></td>
+      </tr>
+		<tr>
+       <td th:each="des:${dList}" colspan="2">
+        <img th:src="${des}" style="width: 100%">
+       </td>
+     </tr>
+      <tr>
+        <td  class="text-right">
+         <input type="button" class="btn btn-sm btn-danger" value="목록"
+          onclick="javascript:history.back()">
+        </td>
+      </tr>
+    </table>
+  </main>
+</div>
+</body>
+</html>
